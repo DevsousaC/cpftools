@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
     font-family: 'inter';
 }
 
@@ -28,18 +29,18 @@
 
 #cpf-tools{
     width: 100%;
-    height: 90vh;
-   
+    padding: 50px 0;
+    background-color: #111111;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    gap: 50px;
 
     
     .cpf-tool{
         width: 500px;
-        height: 80vh;
+        height: 520px;
         border-radius: 10px;
         padding: 30px 22px 22px;
         background-color: var(--bg-global-color);
@@ -56,6 +57,9 @@
     
             color: var(--font-global-color);     
         }
+        .result-description{
+            font-weight: 700;
+        }
     }
     .cpf-tool:hover{
         box-shadow: 0px 0px 10px 10px #4444fa;
@@ -63,6 +67,8 @@
 }
 /* estilo da seção gerar cpf */
 #cpf-generate{
+
+    margin-left: 10px;
 
     #cpf-generate__custom-area{
         margin-top: 25px;
@@ -132,9 +138,6 @@
                 appearance: n;
                 font-size: 14px;
             }
-            #state-area__state:hover{
-                
-            }
         }
         
     }
@@ -197,6 +200,8 @@
 /* estilo da seção checar cpf */
 #cpf-checker{
 
+    margin-right: 10px;
+
     #cpf-checker__input-area{
         margin-top: 60px;
         display: flex;
@@ -231,14 +236,111 @@
 
 }
 
-@media (max-width: 530px){
+#main-footer{
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+    padding: 25px 30px;
+    background-color: var(--bg-global-color);
 
-    .cpf-tool{
-        width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p{
+        color: var(--font-global-color);
+
+        a{
+            color: var(--font-global-color);
+        }
     }
-    .description{
+    #footer__alert{
+        width: 468px;
+        font-size: 12px;
+    }
+}
+
+
+@media (min-height: 794px) and (min-width: 918px){
+    #cpf-tools{
+        height: calc(90vh - 45px);
+    }
+}
+
+@media (max-width: 918px){
+    #cpf-tools{
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .cpf-tool{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    #main-footer{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 540px){
+    #cpf-tools{
+        .cpf-tool{
+            width: 95%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 497px){
+    #main-footer{
+        flex-direction: column;
+        justify-content: space-around;
+
+        #footer__alert{
+            width: 100%;
+        }
+    }
+    
+}
+
+@media (max-width: 375px){
+    .mobile-version{
+        font-size: 14px;
+    }
+    #generate-result{
+        width: 200px;
+    }
+    #validation-result{
+        width: 200px;
         font-size: 14px;
     }
 }
 
-@media (max-width: )
+@media (max-width: 375px){
+    #cpf-generate{
+        #cpf-generate__custom-area{
+            flex-direction: column;
+            align-items: center;
+    
+            #state-area{
+                margin-top: 20px;
+            }
+        }
+        #btn-area{
+            margin-top: 50px;
+        }
+    }
+
+    #main-footer{
+        flex-direction: column;
+        justify-content: space-around;
+
+
+        #footer__credit{
+            margin-top: 25px;
+            font-size: 14px;
+        }
+    
+}

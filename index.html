@@ -20,29 +20,29 @@
     <main id="cpf-tools">
         <section id="cpf-generate" class="cpf-tool">
             <header id="cpf-generate__header" class="cpf__header">
-                <h2 class="title">Gerar novo CPF</h2>
-                <p class="description">Gere um cpf valido do estado a sua escolha.</p>
+                <h2 class="title ">Gerar novo CPF</h2>
+                <p class="description mobile-version">Gere um cpf valido do estado a sua escolha.</p>
             </header>
             <section id="cpf-generate__custom-area">
                 <div id="mask-area">
 
                     <div id="mask-title">
-                        <p id="mask-title__title">cpf formatado?</p>
+                        <p id="mask-title__title" class="mobile-version">cpf formatado?</p>
                     </div>
 
                     <div class="mask-area__radio-area">
                         <div class="select-radio-area">
                             <div id="yes-radio" class="select-radio-area__radio yes-radio radio-checked" ></div>
-                            <p>Sim</p>
+                            <p class="mobile-version">Sim</p>
                         </div>
                         <div class="select-radio-area">
                             <div id="no-radio" class="select-radio-area__radio no-radio"></div>
-                            <p>Não</p>
+                            <p class="mobile-version">Não</p>
                         </div>
                     </div>
                 </div>
                 <div id="state-area">
-                    <p>Estado de origem</p>
+                    <p class="mobile-version">Estado de origem</p>
                     <select name="state-area__state" id="state-area__state">
                         <option value="10">Aleatorio</option>
                         <option value="0">RS</option>
@@ -78,7 +78,7 @@
                 <button id="generate-btn" class="confirm-btn">Gerar</button>
             </section>
             <section class="result-area">
-                <p class="description">Resultado</p>
+                <p class="description result-description mobile-version">cpf gerado</p>
                 <div id="generate-result" class="result-text"></div>
             </section>
 
@@ -87,21 +87,23 @@
         <section id="cpf-checker" class="cpf-tool">
             <header id="cpf-checker__header" class="cpf__header">
                 <h2 class="title">Validar CPF</h2>
-                <p class="description">Digite um cpf e clique em validar para verificar sua validade.</p>
+                <p class="description mobile-version">Digite um cpf e clique em validar para verificar sua validade.</p>
             </header>
             <section id="cpf-checker__input-area">
-                <p id="input-description">Digite o cpf abaixo</p>
+                <p id="input-description" class="mobile-version">Digite o cpf abaixo</p>
                 <input id="cpf-input" class="cpf-input" type="text" onpaste="return false" ondrop="return false" maxlength="14" placeholder="000.000.000-00">
                 <button class="confirm-btn" id="check-btn">validar</button>
             </section>
             <section id="cpf-checker__result-area" class="result-area">
-                <p class="description">Resultado</p>
+                <p class="description result-description mobile-version">Resultado</p>
                 <div id="validation-result" class="result-text"></div>
             </section>
-
         </section>
-        
     </main>
+    <footer id="main-footer">
+        <p id="footer__credit">Desenvolvidor por <a href="https://github.com/DevsousaC">Devsousa</a>. 2024</p>
+        <p id="footer__alert">Este gerador online de CPF tem como intenção ajudar estudantes, programadores, analistas e testadores a gerar CPF válidos. Normalmente necessários parar testar seus softwares em desenvolvimento.</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script 

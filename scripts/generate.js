@@ -53,9 +53,9 @@ const confirmRadio = document.querySelectorAll('.select-radio-area__radio')
 let containMask = true
 confirmRadio.forEach((button) => { // seleciona o radio ativo
     button.addEventListener('click', evt => {
-        for(i = 0; i < 2; i++){
-            confirmRadio[i].classList.remove('radio-checked')
-        }
+        confirmRadio[0].classList.remove('radio-checked')
+        confirmRadio[1].classList.remove('radio-checked')
+        
         evt.target.classList.add('radio-checked')
         if(evt.target.classList.contains('yes-radio')){
             containMask = true
