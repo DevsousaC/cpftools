@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter';
+}
+
+:root{
+    --bg-global-color: #011627;
+    --bg-global-input-color: #535C91;
+    --bg-global-button-color: #1B1A55;
+
+    --font-global-color: #F3E8EE;
+    --font-global-dark-color: #BEC5AD;
+}
+
+#main-header{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--bg-global-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--font-global-color);
+}
+
+#cpf-tools{
+    width: 100%;
+    height: 90vh;
+   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+
+    
+    .cpf-tool{
+        width: 500px;
+        height: 80vh;
+        border-radius: 10px;
+        padding: 30px 22px 22px;
+        background-color: var(--bg-global-color);
+        transition: all 0.5s ease-in;
+
+        .cpf__header{
+            margin-top: 8px;
+            width: 100%;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+            color: var(--font-global-color);     
+        }
+    }
+    .cpf-tool:hover{
+        box-shadow: 0px 0px 10px 10px #4444fa;
+    }
+}
+/* estilo da seção gerar cpf */
+#cpf-generate{
+
+    #cpf-generate__custom-area{
+        margin-top: 25px;
+        width: 100%;
+
+        display: flex;
+
+        #mask-area{
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            
+            p{
+                color: var(--font-global-color)
+            }
+            #mask-title{
+                width: 100%;
+                height: 20px;
+            }
+            .mask-area__radio-area{
+                margin-top: 20px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+
+                .select-radio-area{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+                    .select-radio-area__radio{
+                        cursor: pointer;
+                        border: 2px solid white;
+                        border-radius: 50%;
+                        width: 15px;
+                        height: 15px;
+                        shape-outside: circle();
+                        clip-path: circle();
+                        background-color: #C4C3DC;
+                    }
+                    .radio-checked{
+                        background-color: #4644C5;
+                    }
+                }
+            }
+        }
+        #state-area{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            p{
+                color: var(--font-global-color)
+            }
+            
+
+            #state-area__state{
+                width: 100px;
+                height: 25px;
+                border-radius: 8px;
+                outline: none;
+                box-shadow: none;
+                appearance: n;
+                font-size: 14px;
+            }
+            #state-area__state:hover{
+                
+            }
+        }
+        
+    }
+    #btn-area{
+        margin-top: 80px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.title{
+    margin-bottom: 20px;
+    
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.description{
+    align-self: baseline;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.confirm-btn{
+    width: 185px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--bg-global-button-color);
+
+    color: var(--font-global-dark-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+    
+    
+}
+.confirm-btn:hover{
+    transform: scale(1.05);
+    color: #F5F3F5;
+}
+
+.result-area{
+    margin-top: 40px;
+    color: var(--font-global-color);
+
+    .result-text{
+        margin-top: 10px;
+        border-radius: 10px;
+        width: 270px;
+        height: 40px;
+        padding: 10px 10px;
+        background-color: var(--bg-global-input-color);
+    }
+}
+
+/* estilo da seção checar cpf */
+#cpf-checker{
+
+    #cpf-checker__input-area{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #input-description{
+            font-size: 14px;
+            align-self: baseline;
+            letter-spacing: 1px;
+            color: var(--font-global-color);
+        }
+        #cpf-input{
+            margin: 10px 0 40px;
+            border: none;
+            border-radius: 10px;
+            width: 160px;
+            height: 30px;
+            padding: 5px 10px;
+            background-color: var(--bg-global-input-color);
+        
+            align-self: baseline;
+            color: var(--font-global-color);
+        }
+        #cpf-input:focus{
+            outline: none;
+            border: none;
+        }
+        
+        
+    }
+
+}
+
+@media (max-width: 530px){
+
+    .cpf-tool{
+        width: 95%;
+    }
+    .description{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: )

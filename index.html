@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./stylesheet.css">
+
+    <title>Validar CPF</title>
+</head>
+<body>
+    <header id="main-header">
+        <h1>Ferramentas</h1>
+    </header>
+    <main id="cpf-tools">
+        <section id="cpf-generate" class="cpf-tool">
+            <header id="cpf-generate__header" class="cpf__header">
+                <h2 class="title">Gerar novo CPF</h2>
+                <p class="description">Gere um cpf valido do estado a sua escolha.</p>
+            </header>
+            <section id="cpf-generate__custom-area">
+                <div id="mask-area">
+
+                    <div id="mask-title">
+                        <p id="mask-title__title">cpf formatado?</p>
+                    </div>
+
+                    <div class="mask-area__radio-area">
+                        <div class="select-radio-area">
+                            <div id="yes-radio" class="select-radio-area__radio yes-radio radio-checked" ></div>
+                            <p>Sim</p>
+                        </div>
+                        <div class="select-radio-area">
+                            <div id="no-radio" class="select-radio-area__radio no-radio"></div>
+                            <p>Não</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="state-area">
+                    <p>Estado de origem</p>
+                    <select name="state-area__state" id="state-area__state">
+                        <option value="10">Aleatorio</option>
+                        <option value="0">RS</option>
+                        <option value="1">DF</option>
+                        <option value="1">GO</option>
+                        <option value="1">MS</option>
+                        <option value="1">TO</option>
+                        <option value="2">PA</option>
+                        <option value="2">AM</option>
+                        <option value="2">AC</option>
+                        <option value="2">AP</option>
+                        <option value="2">RO</option>
+                        <option value="2">RR</option>
+                        <option value="3">CE</option>
+                        <option value="3">MA</option>
+                        <option value="3">PI</option>
+                        <option value="4">PE</option>
+                        <option value="4">RN</option>
+                        <option value="4">PB</option>
+                        <option value="4">AL</option>
+                        <option value="5">BA</option>
+                        <option value="5">SE</option>
+                        <option value="6">MG</option>
+                        <option value="7">RJ</option>
+                        <option value="7">ES</option>
+                        <option value="8">SP</option>
+                        <option value="9">PR</option>
+                        <option value="9">SC</option>
+                    </select>
+                </div>
+            </section>
+            <section id="btn-area">
+                <button id="generate-btn" class="confirm-btn">Gerar</button>
+            </section>
+            <section class="result-area">
+                <p class="description">Resultado</p>
+                <div id="generate-result" class="result-text"></div>
+            </section>
+
+        </section>
+
+        <section id="cpf-checker" class="cpf-tool">
+            <header id="cpf-checker__header" class="cpf__header">
+                <h2 class="title">Validar CPF</h2>
+                <p class="description">Digite um cpf e clique em validar para verificar sua validade.</p>
+            </header>
+            <section id="cpf-checker__input-area">
+                <p id="input-description">Digite o cpf abaixo</p>
+                <input id="cpf-input" class="cpf-input" type="text" onpaste="return false" ondrop="return false" maxlength="14" placeholder="000.000.000-00">
+                <button class="confirm-btn" id="check-btn">validar</button>
+            </section>
+            <section id="cpf-checker__result-area" class="result-area">
+                <p class="description">Resultado</p>
+                <div id="validation-result" class="result-text"></div>
+            </section>
+
+        </section>
+        
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" 
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    </script>
+    <script src="./scripts/generate.js"></script>
+    <script src="./scripts/checker.js"></script>
+</body>
+</html>
